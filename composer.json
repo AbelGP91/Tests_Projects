@@ -1,0 +1,18 @@
+{
+    "name": "formacio/test-project",
+    "description": "Primera practica PHPUnit",
+    "require": {
+        "phpunit/phpunit": "^10.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Formacio\\TestProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abel Galindo",
+            "email": "abel.gp.1991@hotmail.es"
+        }
+    ]
+}
