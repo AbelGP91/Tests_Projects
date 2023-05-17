@@ -1,7 +1,7 @@
 
 <?php
 
-include "src/NumberChecker.php";
+include "src/Tema_7/Nivell_1/NumberChecker.php";
 
 use PHPUnit\Framework\TestCase;
 
