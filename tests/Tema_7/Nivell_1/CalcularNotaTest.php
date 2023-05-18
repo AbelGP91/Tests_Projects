@@ -12,10 +12,10 @@ final class CalcularNotaTest extends TestCase{
 
         return [
 
-            [60],
-            [50],
-            [40],
-            [30]
+            [60, "L'alumne és de Primera Divisió"],
+            [45, "L'alumne és de Segona Divisió"],
+            [33, "L'alumne és de Tercera Divisió"],
+            [20, "L'alumne ha de recuperar"]
 
         ];   
 
@@ -26,26 +26,12 @@ final class CalcularNotaTest extends TestCase{
  * @dataProvider ClassConstructorProvider
  */
     
-    public function testClassConstructor($dataProvider){
+    public function testClassConstructor($valor,$divisio){
    
-        $nota = new CalcularNota($dataProvider);
-                
-        // if ($nota>=60){
-
-            $this->assertGreaterThanOrEqual(60,$nota->notes());
-            $this->assertEqualsIgnoringCase("L'alumne és de Primera Divisió",$nota->notes());
-
-            $this->assertGreaterThanOrEqual(50,$nota->notes());
-            $this->assertEqualsIgnoringCase("L'alumne és de Segona Divisió",$nota->notes());
-
-            $this->assertGreaterThanOrEqual(40,$nota->notes());
-            $this->assertEqualsIgnoringCase("L'alumne és de Tercera Divisió",$nota->notes());
-
-            $this->assertGreaterThanOrEqual(30,$nota->notes());
-            $this->assertEqualsIgnoringCase("L'alumne ha de recuperar",$nota->notes());
-
-
-        // }
+        $nota = new CalcularNota($valor);             
+            
+            $this->assertEqualsIgnoringCase($divisio,$nota->notes());          
+       
         
     }
 
